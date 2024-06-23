@@ -3,13 +3,13 @@ install:
 		pip install -r requirements.txt
 
 test:
-	#python -m pytest -vv test_application.py
+	# python -m pytest -vv test_application.py
 
 lint:
 	pylint --disable=R,C application.py
 
 deploy:
-	echo "Deploying app"
-	eb deploy hello-env
+	@echo "Deploying app..."
+	eb deploy cloned-flask-eb-dev
 
-all: install lint test 
+all: install lint 
